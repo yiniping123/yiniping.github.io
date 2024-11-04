@@ -1,0 +1,221 @@
+\documentclass[12pt]{elsarticle}
+\makeatletter
+\def\ps@pprintTitle{%
+ \let\@oddhead\@empty
+ \let\@evenhead\@empty
+ \let\@oddfoot\@empty
+ \let\@evenfoot\@empty
+}
+\makeatother
+
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{array}
+\usepackage[linesnumbered,ruled,vlined]{algorithm2e}
+\usepackage{amsthm}
+\usepackage{fancyvrb}
+\usepackage{datetime}
+\usepackage{microtype}
+\usepackage{enumitem}
+
+
+\newtheorem{theorem}{Theorem}
+
+\begin{document}
+
+\begin{frontmatter}
+
+\title{The problem of Turán numbers of two disjoint stars }
+
+\author{Niping Yi}
+\ead{yiniping123@gmail.com}
+\date{March 28, 2021}
+
+
+\begin{abstract}
+    In this paper, we investigate the Turán numbers of two disjoint star graphs, denoted as \( S_k \) and \( S_l \), where \( l \le k \). We aim to determine the maximum number of edges in a graph of order \( n \) that avoids containing the graph \( S_k \cup S_l \) as a subgraph. Our main result provides a formula for the Turán number \( ex(n, S_k \cup S_l) \) based on the values of \( n \), \( k \), and \( l \).  
+    \end{abstract}
+
+\begin{keyword}
+Turán number \sep Disjoint Stars \sep Extremal Graph
+\end{keyword}
+
+\end{frontmatter}
+
+\section{Introduction}
+Our notation in this paper is standard. Let \( G = (V(G), E(G)) \) be a simple graph, where \( V(G) \) is the vertex set with size \( v(G) \) and \( E(G) \) is the edge set with size \( e(G) \). The degree of \( v \in V(G) \), the number of edges incident to \( v \), is denoted by \( d_G(v) \) and the set of neighbors of \( v \) is denoted by \( N(v) \).  Let \( G \) and \( H \) be two disjoint graphs, denote by \( G \cup H \) the disjoint union of \( G \) and \( H \) and by \( k \cdot G \) the disjoint union of \( k \) copies of a graph \( G \). Let \( S_k \) denote the star on \( k + 1 \) vertices. 
+
+The Turán number of a graph \( H \), \( \text{ex}(n, H) \), is the maximum number of edges in a graph of order \( n \) which does not contain \( H \) as a subgraph. We say that a graph is \( H \)-free if it does not contain \( H \) as a subgraph.
+
+In this article, we determine \( ex(n, S_k \cup S_l) \) for all values of \( n, k, l \), where \( l \le k \).
+
+
+We will prove the following theorem.
+
+\begin{theorem}\label{thm1}
+    If $l \le k$, then
+    \begin{footnotesize}
+    \[
+    ex(n, S_{k} \cup S_{l}) = 
+    \begin{cases} 
+    \binom{n}{2}, & \text{if } n \le l + k + 1, \\
+    \max\left\{\left\lfloor \frac{(l-1)n+(k+1)(l+k+1)}{2} \right\rfloor, \left\lfloor \frac{(l+1)n+(k+1)(l+1)}{2} \right\rfloor, \left\lfloor \frac{(k-1)n}{2} \right\rfloor\right\}, & \text{if } n \ge l + k + 2.
+    \end{cases}
+    \]
+\end{footnotesize}
+    \end{theorem}
+
+
+
+It is easy to check that 
+\begin{equation}
+ex(n, 2 \cdot S_{l}) \leq ex(n, S_{l}\cup S_{k}) \leq ex(n, 2 \cdot S_{k}) \notag
+\end{equation}
+where
+\begin{equation}
+ex(n, 2 \cdot S_{l}) = \left\{
+\begin{aligned}
+    &\binom{n}{2}, & \text{if } n \le 2(l+1) \\ 
+    &\left\lfloor \frac{(l-1)n+(l+1)(2l+1)}{2} \right\rfloor, & \text{if }  2(l+1) \le n \le (l+1)^2 \\
+    &\left\lfloor \frac{(l+1)n-(l+1)}{2} \right\rfloor, & \text{if } n \ge (l+1)^2 
+\end{aligned}
+\right.
+\label{eq:li2020}
+\end{equation}
+As shown in Equation \ref{eq:li2020}, \cite{li2020}
+
+
+
+
+
+
+
+\section{Proof of Theorem \ref{thm1}}
+\textbf{Proof.}
+Assume that \( l < k \).
+Denote 
+\begin{footnotesize}
+$$f(n,k,l)=\max\left\{\left\lfloor \frac{(l-1)n+(k+1)(l+k+1)}{2} \right\rfloor, \left\lfloor \frac{(l+1)n+(k+1)(l+1)}{2} \right\rfloor, \left\lfloor \frac{(k-1)n}{2} \right\rfloor\right\}
+$$
+\end{footnotesize}
+Let $G$ be an $S_k \cup S_l$-free graph with $e(G)\ge f(n,k,l)$, and let $u \in V(G)$ be a vertex of maximum degree in $G$. We have the following claims. \\
+
+\textbf{Claim 1:} $\Delta(G) \ge k$.  \\
+
+\textbf{Proof.} Suppose $\Delta(G) \le k-1$. Then $e(G) \le \left\lfloor \frac{(k-1)n}{2} \right\rfloor$, which implies $e(G) \le f(n, k, l)$, leading to a contradiction. Therefore, $\Delta(G) \ge k$.   \\
+
+\textbf{Claim 2:} $\Delta(G) \le k + l$. \\
+
+\textbf{Proof.} Suppose $\Delta(G) \ge k + l + 1$. For any $v \in V(G) \setminus \{u\}$, we have $d(v) \le l$. Otherwise, if there exists a $v \in V(G)$ such that $d(v) \ge l + 1$, then $G$ contains $S_k \cup S_l$, which is a contradiction.  Then $e(G) \le \left\lfloor \frac{n-1+l(n-1)}{2} \right\rfloor$, which implies $e(G) \le f(n, k, l)$, a contradiction.  \\
+
+\textbf{Claim 3:} $\delta(G) \in [l - 1, k - 2]$. \\
+
+\textbf{Proof.} By the extremality of $ex(n, S_{k} \cup S_{l})$, it is easy to see that $\delta(G) \ge l - 1$. On the other hand, if $\delta(G) \ge k - 1$, and since $\Delta(G) \ge k$, then $G$ contains $S_k \cup S_l$, which is a contradiction.   \\
+
+\textbf{Claim 4:} There are at least two vertices in $G$ with degree greater than $l$. \\
+
+\textbf{Proof.} By contradiction. Suppose there is only one vertex with degree greater than $l$, and all other vertices have degree at most $l$. Then $e(G) \le \left\lfloor \frac{(n - 1) + l(n - 1)}{2} \right\rfloor$, which implies $e(G) \le f(n, k, l) $, leading to a contradiction. \\
+
+Based on the above claims, let us assume another vertex with degree greater than $l$ is $y$. \\
+
+\textbf{Claim 5:} $\Delta(G) \le k + l - 1$. \\
+
+\textbf{Proof.} Suppose $\Delta(G) = k + l$. Then we have $N(y) \subseteq N(u)$, otherwise $G$ contains $S_k \cup S_l$, which is a contradiction. \\
+
+Now we consider $k \le \Delta(G) \le k + l - i$, where $i \ge 1$.
+We define the following notations. Let $Z = \{x \mid x \in N(u), d(x) \ge l + 1\}$, and let $z = |Z|$. Let $V_1 = \{x \mid x \in V(G) \setminus N(u), d(x) \ge l\}$, and $V_2 = V(G) \setminus (N(u) \cup V_1)$. Let $m_{l+t}$ be the number of vertices in $V_1$ with degree $l + t$, where $0 \le t \le k - i$. Let $m_q$ be the number of vertices in $V_2$ with degree $q$, where $0 \le q \le l - 1$. 
+
+
+
+% First, we claim that for any $x \in Z$, $|N(x) \setminus N(u)| \le i$. Otherwise, if there exists an $x$ such that $|N(x) \setminus N(u)| \ge i + 1$, then $G$ contains $S_k \cup S_l$, which is a contradiction.
+    
+% Secondly, we claim that for any $y \in V_1$, $|N(y) \cap N(u)| \ge l + t - (i - 1)$. If $|N(y) \cap N(u)| \le l + t - i$, then the degree of vertices in $N(y)$ intersecting with $V(G) \setminus N(u)$ is at least $l$, which implies that $G$ contains $S_k \cup S_l$, leading to a contradiction.
+    
+% Thirdly,  
+% \begin{align}
+%     e(N(u), V_1 \cup V_2) &= \sum |N(x) \cap N(u)| + \sum |N(x) \cap N(u)| \\
+%     &\le iz + (l - 1)|N(u) \setminus Z| = iz + (l - 1)(l + k - i - z)
+% \end{align}
+
+% \begin{small}
+% \begin{align}
+% e(N(u), V_1\cup V_2) &= \sum{|N(x)\cap N(u)|}+\sum{|N(x)\cap N(u)|} \\
+% &\ge \sum{(l+t-(i-1))m_{l+t}}
+% \end{align}
+% \end{small}
+
+\begin{enumerate}[label=(\alph*)]
+    \item We claim that for any $x \in Z$, $|N(x) \setminus N(u)| \le i$. Otherwise, if there exists an $x$ such that $|N(x) \setminus N(u)| \ge i + 1$, then $G$ contains $S_k \cup S_l$, which is a contradiction.
+    
+    \item We claim that for any $y \in V_1$, $|N(y) \cap N(u)| \ge l + t - (i - 1)$. If $|N(y) \cap N(u)| \le l + t - i$, then the degree of vertices in $N(y)$ intersecting with $V(G) \setminus N(u)$ is at least $l$, which implies that $G$ contains $S_k \cup S_l$, leading to a contradiction.
+    
+    \item 
+    \begin{align}
+        e(N(u), V_1 \cup V_2) &= \sum_{x\in Z} |N(x) \cap N(u)| + \sum_{x\in N(u)\setminus Z} |N(x) \cap N(u)| \notag \\ 
+        &\le iz + (l - 1)|N(u) \setminus Z| = iz + (l - 1)(l + k - i - z) \notag
+    \end{align}
+    
+    \begin{small}
+    \begin{align}
+    e(N(u), V_1 \cup V_2) &= \sum_{x\in V_1}{|N(x) \cap N(u)|} + \sum_{x\in V_2}{|N(x) \cap N(u)|} \notag \\
+    &\ge \sum_{t=0}^{k-i}{(l + t - (i - 1)) m_{l + t}} \notag
+    \end{align}
+    \end{small}
+\end{enumerate}
+
+% \textbf{Claim 6:}
+
+\begin{small}
+    \begin{align}
+    2e(G) &= d(u) + \sum_{x \in Z} d(x) + \sum_{x \in N(u) \setminus Z} d(x) + \sum_{x \in V_1} d(x) + \sum_{x \in V_2} d(x) \notag \\
+    &\le k + l - i + (k + l - i)z + (k + l - i - z)l + \sum_{t=0}^{k-i}(l + t)m_{l+t} + \sum_{q=0}^{l-1}qm_{q} \notag
+    \end{align}
+    \end{small}
+    
+    
+    \begin{small}
+\begin{align}
+2e(G) &\ge 2f(n, k, l) + 2 \notag \\
+&\ge 2 \left\lfloor \frac{(l-1)n + (k+1)(l+k+1)}{2} \right\rfloor+2 \notag \\
+&\ge (l-1)n + (k+1)(l+k+1) \notag \\
+&= (l-1)\left(\sum_{t=0}^{k-i} m_{l+t} + \sum_{q=0}^{l-1} m_{q} + k + l - i + 1\right) + (k+1)(l+k+1) \notag
+\end{align}
+\end{small}
+
+From (c), we have
+\begin{footnotesize}
+    \begin{align}
+    & iz + (l-1)(k + l - i - z) + (k + l - i) + (k + l - i)z + (k + l - i - z)l + \left(\sum_{t=0}^{k-i}(l + t)m_{l+t} + \sum_{q=0}^{l-1}qm_{q}\right) \notag \\
+    & \ge \sum_{t=0}^{k-i} (l + t - (i - 1))m_{l+t} +(l-1)\left(\sum_{t=0}^{k-i} m_{l+t} + \sum_{q=0}^{l-1} m_{q} + k + l - i + 1\right) + (k+1)(l+k+1) \notag
+    \end{align}
+    \end{footnotesize} \\
+    
+
+Thus, we obtain
+
+$$
+z \ge \frac{\left(\sum_{t=0}^{k-i} (l - i)m_{l+t} + \sum_{q=0}^{l-1-}(l-1-q) m_{q}\right) + (k^2-l^2)+li+l+k+i}{k-l+1} 
+$$
+
+Given that $$\frac{(k^2-l^2)+li+l+k+i}{k-l+1} > k+l-i,$$ it follows that $$z > k + l - i$$.
+
+% 易证$\frac{(k^2-l^2)+li+l+k+i}{k-l+1} \gt k+l-i$, 则可得
+% $z\gt k + l - i$
+
+
+This leads to a contradiction. $\blacksquare$
+
+
+% \section*{Acknowledgments}
+% This paper was completed as a part of a small project during the Spring 2020 semester in the course “Extremal Graph Theory.” 
+
+\begin{thebibliography}{00}
+    \bibitem{li2020}
+    Sha-Sha Li and Jian-Hua Yin, "Two results about the Turán number of star forests," Discrete Mathematics, vol. 343, no. 11, pp. 111702, 2020.
+    
+
+\end{thebibliography}
+
+\end{document}

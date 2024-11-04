@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="*:  recommend 0. Python On-line tutorial      廖雪峰Python教程* Composing Programs Learning with Python 3  Numpy tutorial   On-line course MIT: A Gentle Introduction to Programming Using Python* Stanford:">
+<meta name="keywords" content="deep_learning">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Deep Leaning Rookie Guide">
+<meta property="og:url" content="https://yiniping123.github.io/yiniping.github.io/2019/03/06/deep-learning-rookie-guide/index.html">
+<meta property="og:site_name" content="Niping Yi&#39;s Blog">
+<meta property="og:description" content="*:  recommend 0. Python On-line tutorial      廖雪峰Python教程* Composing Programs Learning with Python 3  Numpy tutorial   On-line course MIT: A Gentle Introduction to Programming Using Python* Stanford:">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-03-07T05:07:34.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Deep Leaning Rookie Guide">
+<meta name="twitter:description" content="*:  recommend 0. Python On-line tutorial      廖雪峰Python教程* Composing Programs Learning with Python 3  Numpy tutorial   On-line course MIT: A Gentle Introduction to Programming Using Python* Stanford:">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="/images/favicon.ico">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+          
+        
+    
+    <!-- title -->
+    <title>Deep Leaning Rookie Guide</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- persian styles -->
+    
+      <link rel="stylesheet" href="/css/rtl.css">
+    
+    <!-- rss -->
+    
+    
+</head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="http://github.com/Jakexxh">Projects</a></li>
+         
+          <li><a href="/categories/">Categories</a></li>
+         
+          <li><a href="/tags/">Tags</a></li>
+         
+          <li><a href="/search/">Search</a></li>
+        
+      </ul>
+    </span>
+    <br>
+    <span id="actions">
+      <ul>
+        
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://yiniping123.github.io/yiniping.github.io/2019/03/06/deep-learning-rookie-guide/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://yiniping123.github.io/yiniping.github.io/2019/03/06/deep-learning-rookie-guide/&text=Deep Leaning Rookie Guide"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://yiniping123.github.io/yiniping.github.io/2019/03/06/deep-learning-rookie-guide/&title=Deep Leaning Rookie Guide"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://yiniping123.github.io/yiniping.github.io/2019/03/06/deep-learning-rookie-guide/&is_video=false&description=Deep Leaning Rookie Guide"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Deep Leaning Rookie Guide&body=Check out this article: https://yiniping123.github.io/yiniping.github.io/2019/03/06/deep-learning-rookie-guide/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://yiniping123.github.io/yiniping.github.io/2019/03/06/deep-learning-rookie-guide/&title=Deep Leaning Rookie Guide"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://yiniping123.github.io/yiniping.github.io/2019/03/06/deep-learning-rookie-guide/&title=Deep Leaning Rookie Guide"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://yiniping123.github.io/yiniping.github.io/2019/03/06/deep-learning-rookie-guide/&title=Deep Leaning Rookie Guide"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://yiniping123.github.io/yiniping.github.io/2019/03/06/deep-learning-rookie-guide/&title=Deep Leaning Rookie Guide"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://yiniping123.github.io/yiniping.github.io/2019/03/06/deep-learning-rookie-guide/&name=Deep Leaning Rookie Guide&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#0-Python"><span class="toc-number">1.</span> <span class="toc-text">0. Python</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-Deep-Learning"><span class="toc-number">2.</span> <span class="toc-text">1. Deep Learning</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1-Preparation"><span class="toc-number">2.1.</span> <span class="toc-text">1.1. Preparation</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-2-Linear-Classification"><span class="toc-number">2.2.</span> <span class="toc-text">1.2 Linear Classification</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-3-Back-Prop"><span class="toc-number">2.3.</span> <span class="toc-text">1.3 Back Prop</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-4-Neural-Network"><span class="toc-number">2.4.</span> <span class="toc-text">1.4 Neural Network</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-5-CNN-amp-RNN"><span class="toc-number">2.5.</span> <span class="toc-text">1.5 CNN &amp; RNN</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-Tensorflow"><span class="toc-number">3.</span> <span class="toc-text">2. Tensorflow</span></a></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index py4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        Deep Leaning Rookie Guide
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">Niping Yi's Blog</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2019-03-06T21:38:28.000Z" itemprop="datePublished">2019-03-06</time>
+        
+      
+    </div>
+
+
+      
+
+      
+    <div class="article-tag">
+        <i class="fas fa-tag"></i>
+        <a class="tag-link" href="/tags/deep-learning/">deep_learning</a>
+    </div>
+
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <p><strong>*:  recommend</strong></p>
+<h2 id="0-Python"><a href="#0-Python" class="headerlink" title="0. Python"></a>0. Python</h2><ul>
+<li>On-line tutorial     <ul>
+<li><a href="https://www.liaoxuefeng.com/wiki/0014316089557264a6b348958f449949df42a6d3a2e542c000" target="_blank" rel="noopener">廖雪峰Python教程*</a></li>
+<li><a href="http://www.composingprograms.com/" target="_blank" rel="noopener">Composing Programs</a></li>
+<li><a href="http://www.openbookproject.net/thinkcs/python/english3e/" target="_blank" rel="noopener">Learning with Python 3 </a></li>
+<li><a href="http://cs231n.github.io/python-numpy-tutorial/" target="_blank" rel="noopener">Numpy tutorial</a></li>
+</ul>
+</li>
+<li>On-line course<ul>
+<li><a href="https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-189-a-gentle-introduction-to-programming-using-python-january-iap-2011/index.htm" target="_blank" rel="noopener">MIT: A Gentle Introduction to Programming Using Python*</a></li>
+<li><a href="http://stanfordpython.com/" target="_blank" rel="noopener">Stanford: the python programming language</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="1-Deep-Learning"><a href="#1-Deep-Learning" class="headerlink" title="1. Deep Learning"></a>1. Deep Learning</h2><h3 id="1-1-Preparation"><a href="#1-1-Preparation" class="headerlink" title="1.1. Preparation"></a>1.1. Preparation</h3><ul>
+<li>On-line tutorials<ul>
+<li><a href="http://ufldl.stanford.edu/wiki/index.php/UFLDL_Tutorial" target="_blank" rel="noopener">UFLDL*</a></li>
+<li><a href="http://deeplearning.stanford.edu/tutorial/" target="_blank" rel="noopener">UFLDL(new)</a></li>
+<li><a href="http://www.deeplearningbook.org/" target="_blank" rel="noopener">Deep Learning</a></li>
+<li><a href="https://cs.nju.edu.cn/zhouzh/zhouzh.files/publication/MLbook2016.htm" target="_blank" rel="noopener"><em>机器学习 - 周志华</em></a></li>
+</ul>
+</li>
+<li>On-line courses<ul>
+<li><a href="http://cs231n.stanford.edu/index.html" target="_blank" rel="noopener">Stanford: CS231n*</a></li>
+<li><a href="http://web.stanford.edu/class/cs224n/index.html" target="_blank" rel="noopener">Stanford:CS224n*</a></li>
+<li><a href="https://www.coursera.org/learn/machine-learning/home/welcome" target="_blank" rel="noopener">Coursera: Machine Leaning</a></li>
+<li><a href="https://www.coursera.org/learn/neural-networks-deep-learning/home/welcome" target="_blank" rel="noopener">Coursera: Deep Learning</a> </li>
+<li><a href="https://www.coursera.org/learn/machine-learning/home/welcome" target="_blank" rel="noopener">Machine Learning - Andrew Ng</a></li>
+</ul>
+</li>
+</ul>
+<h3 id="1-2-Linear-Classification"><a href="#1-2-Linear-Classification" class="headerlink" title="1.2 Linear Classification"></a>1.2 Linear Classification</h3><p><strong>reference</strong>:</p>
+<p>​    <em><a href="http://cs231n.github.io/linear-classify/" target="_blank" rel="noopener">CS231n linear classification</a></em></p>
+<p>​    <em><a href="https://medium.com/@shiyan/l1-norm-regularization-and-sparsity-explained-for-dummies-5b0e4be3938a" target="_blank" rel="noopener">L1 norm regularization and sparsity explained for dummies</a></em></p>
+<p>​    <em><a href="http://www.cnblogs.com/maybe2030/p/5089753.html" target="_blank" rel="noopener">Machine Learning 梯度下降法的三种形式BGD、SGD以及MBGD</a></em></p>
+<h3 id="1-3-Back-Prop"><a href="#1-3-Back-Prop" class="headerlink" title="1.3 Back Prop"></a>1.3 Back Prop</h3><p><strong>reference:</strong><br>    <a href="http://cs231n.stanford.edu/slides/2017/cs231n_2017_lecture4.pdf" target="_blank" rel="noopener">CS231n backprop slides</a></p>
+<h3 id="1-4-Neural-Network"><a href="#1-4-Neural-Network" class="headerlink" title="1.4 Neural Network"></a>1.4 Neural Network</h3><p><strong>reference:</strong><br>    Neural Nets slides and notes(1, 2, 3) in <a href="http://cs231n.stanford.edu/syllabus.html" target="_blank" rel="noopener">CS231n</a></p>
+<h3 id="1-5-CNN-amp-RNN"><a href="#1-5-CNN-amp-RNN" class="headerlink" title="1.5 CNN &amp; RNN"></a>1.5 CNN &amp; RNN</h3><p><strong>reference:</strong></p>
+<p>​    <a href="http://cs231n.github.io/convolutional-networks/" target="_blank" rel="noopener">CS231n CNN</a><br>​<br>​    <a href="http://brohrer.github.io/how_convolutional_neural_networks_work.html" target="_blank" rel="noopener">How CNN works</a><br>​<br>​    <a href="http://cs231n.stanford.edu/slides/2017/cs231n_2017_lecture10.pdf" target="_blank" rel="noopener">CS231n RNN</a><br>​<br>​    <a href="http://colah.github.io/posts/2015-08-Understanding-LSTMs/" target="_blank" rel="noopener">Understanding LSTM Networks</a> </p>
+<h2 id="2-Tensorflow"><a href="#2-Tensorflow" class="headerlink" title="2. Tensorflow"></a>2. Tensorflow</h2><ul>
+<li>On-line Courses<ul>
+<li><a href="http://web.stanford.edu/class/cs20si/index.html" target="_blank" rel="noopener">Stanford: CS 20SI</a></li>
+</ul>
+</li>
+<li>On-line Tutorial<ul>
+<li><a href="http://tensorflowbook.com/" target="_blank" rel="noopener">Tensorflowbook</a></li>
+</ul>
+</li>
+</ul>
+
+  </div>
+</article>
+
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="http://github.com/Jakexxh">Projects</a></li>
+         
+          <li><a href="/categories/">Categories</a></li>
+         
+          <li><a href="/tags/">Tags</a></li>
+         
+          <li><a href="/search/">Search</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#0-Python"><span class="toc-number">1.</span> <span class="toc-text">0. Python</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-Deep-Learning"><span class="toc-number">2.</span> <span class="toc-text">1. Deep Learning</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1-Preparation"><span class="toc-number">2.1.</span> <span class="toc-text">1.1. Preparation</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-2-Linear-Classification"><span class="toc-number">2.2.</span> <span class="toc-text">1.2 Linear Classification</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-3-Back-Prop"><span class="toc-number">2.3.</span> <span class="toc-text">1.3 Back Prop</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-4-Neural-Network"><span class="toc-number">2.4.</span> <span class="toc-text">1.4 Neural Network</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-5-CNN-amp-RNN"><span class="toc-number">2.5.</span> <span class="toc-text">1.5 CNN &amp; RNN</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-Tensorflow"><span class="toc-number">3.</span> <span class="toc-text">2. Tensorflow</span></a></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://yiniping123.github.io/yiniping.github.io/2019/03/06/deep-learning-rookie-guide/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://yiniping123.github.io/yiniping.github.io/2019/03/06/deep-learning-rookie-guide/&text=Deep Leaning Rookie Guide"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://yiniping123.github.io/yiniping.github.io/2019/03/06/deep-learning-rookie-guide/&title=Deep Leaning Rookie Guide"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://yiniping123.github.io/yiniping.github.io/2019/03/06/deep-learning-rookie-guide/&is_video=false&description=Deep Leaning Rookie Guide"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Deep Leaning Rookie Guide&body=Check out this article: https://yiniping123.github.io/yiniping.github.io/2019/03/06/deep-learning-rookie-guide/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://yiniping123.github.io/yiniping.github.io/2019/03/06/deep-learning-rookie-guide/&title=Deep Leaning Rookie Guide"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://yiniping123.github.io/yiniping.github.io/2019/03/06/deep-learning-rookie-guide/&title=Deep Leaning Rookie Guide"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://yiniping123.github.io/yiniping.github.io/2019/03/06/deep-learning-rookie-guide/&title=Deep Leaning Rookie Guide"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://yiniping123.github.io/yiniping.github.io/2019/03/06/deep-learning-rookie-guide/&title=Deep Leaning Rookie Guide"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://yiniping123.github.io/yiniping.github.io/2019/03/06/deep-learning-rookie-guide/&name=Deep Leaning Rookie Guide&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> Share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy; 2020 Niping Yi
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="http://github.com/Jakexxh">Projects</a></li>
+         
+          <li><a href="/categories/">Categories</a></li>
+         
+          <li><a href="/tags/">Tags</a></li>
+         
+          <li><a href="/search/">Search</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+    <!-- styles -->
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+<link rel="stylesheet" href="/lib/justified-gallery/css/justifiedGallery.min.css">
+
+    <!-- jquery -->
+<script src="/lib/jquery/jquery.min.js"></script>
+<script src="/lib/justified-gallery/js/jquery.justifiedGallery.min.js"></script>
+<script src="/js/main.js"></script>
+<!-- search -->
+
+<!-- Google Analytics -->
+
+    <script type="text/javascript">
+        (function(i,s,o,g,r,a,m) {i['GoogleAnalyticsObject']=r;i[r]=i[r]||function() {
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-140016256-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+
+<!-- Baidu Analytics -->
+
+<!-- Disqus Comments -->
+
+
+</body>
+</html>
