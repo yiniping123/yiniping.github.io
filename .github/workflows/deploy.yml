@@ -33,4 +33,3 @@ jobs:
           personal_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./public
           publish_branch: main
-          destination_repo: yiniping123/yiniping
