@@ -16,7 +16,7 @@ jobs:
       - name: Set up Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: '2.6'  # 使用最新的稳定版本
+          ruby-version: '2.6'
 
       - name: Build project
         run: |
@@ -27,6 +27,6 @@ jobs:
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./_site  # 这里是你的构建输出目录
-          destination_repo: yiniping123/yiniping  # 公开仓库的名称
+          personal_token: ${{ secrets.PERSONAL_TOKEN }}  # 使用个人访问令牌
+          publish_dir: ./_site
+          destination_repo: yiniping123/yiniping # 确保这是你的 GitHub Pages 仓库
