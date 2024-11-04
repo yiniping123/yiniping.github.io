@@ -13,6 +13,11 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '16'
+
       - name: Set up Ruby
         uses: ruby/setup-ruby@v1
         with:
@@ -27,6 +32,6 @@ jobs:
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
-          personal_token: ${{ secrets.PERSONAL_TOKEN }}  # 使用个人访问令牌
+          personal_token: ${{ secrets.PERSONAL_TOKEN }}
           publish_dir: ./_site
-          destination_repo: yiniping123/yiniping # 确保这是你的 GitHub Pages 仓库
+          destination_repo: yiniping123/yiniping
