@@ -1,0 +1,33 @@
+# 忽略 .github 目录
+.github/
+
+# 忽略 .history 目录
+.history/
+
+# 忽略 .vscode 目录
+.vscode/
+
+# 忽略 Jakexxh.github.io 目录
+Jakexxh.github.io/
+
+# 忽略 node_modules 目录
+node_modules/
+
+# 忽略 test 目录
+test/
+
+# 忽略 .DS_Store 文件
+.DS_Store
+
+# 忽略 Gemfile 和 Gemfile.lock 文件
+Gemfile
+Gemfile.lock
+
+# 忽略 _config.yml 文件
+_config.yml
+
+# 忽略 package-lock.json 文件
+package-lock.json
+
+# 忽略 package.json 文件
+package.json
