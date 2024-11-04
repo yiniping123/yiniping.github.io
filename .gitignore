@@ -31,3 +31,6 @@ package-lock.json
 
 # 忽略 package.json 文件
 package.json
+
+.gitignore
+
