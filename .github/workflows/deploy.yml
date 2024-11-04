@@ -14,9 +14,9 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Set up Ruby
-        uses: actions/setup-ruby@v1
+        uses: ruby/setup-ruby@v1
         with:
-          ruby-version: '2.6'  # 选择适合你的项目的 Ruby 版本
+          ruby-version: '2.6'  # 使用最新的稳定版本
 
       - name: Build project
         run: |
