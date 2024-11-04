@@ -18,20 +18,18 @@ jobs:
         with:
           node-version: '16'
 
-      - name: Set up Ruby
-        uses: ruby/setup-ruby@v1
-        with:
-          ruby-version: '2.6'
+      - name: Install Hexo
+        run: npm install hexo-cli -g
+
+      - name: Install dependencies
+        run: npm install
 
       - name: Build project
-        run: |
-          gem install bundler -v 2.4.22
-          bundle install
-          bundle exec jekyll build
+        run: hexo generate
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           personal_token: ${{ secrets.PERSONAL_TOKEN }}
-          publish_dir: ./_site
+          publish_dir: ./public
           destination_repo: yiniping123/yiniping
